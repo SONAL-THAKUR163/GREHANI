@@ -1,6 +1,6 @@
 # 🤖 GREHANI – AI Agent
 
-> An AI-powered conversational assistant built with HTML, CSS, JavaScript, Node.js, Express.js, and OpenAI API.
+> An AI-powered conversational assistant built with HTML, CSS, JavaScript, Node.js, Express.js, and OpenRouter API.
 
 ⭐ **If you like this project, please consider giving it a star on GitHub!**
 
