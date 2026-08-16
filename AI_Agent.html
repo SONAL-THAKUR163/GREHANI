@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GREHANI - Talk Freely. Think clearly. Feel lighter.</title>
+
+    <link
+        rel="stylesheet"
+        href="AI_Agent.css"
+    >
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">
+                    ✨
+                </div>
+                <div>
+                    <h1>
+                        GREHANI
+                    </h1>
+                    <p>
+                        Talk Freely. Think clearly. Feel lighter.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="header-actions">
+                <button
+                    id="darkModeButton"
+                    class="icon-button"
+                    title="Dark mode"
+                >
+                    🌙
+                </button>
+
+
+                <button
+                    id="clearButton"
+                    class="icon-button"
+                    title="Clear chat"
+                >
+                    🗑️
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="status"
+            class="status"
+        >
+            Ready
+        </div>
+
+        <main
+            id="chatBox"
+            class="chat-box"
+        >
+
+            <div class="message ai-message">
+
+                <div class="avatar">
+                    🤖
+                </div>
+
+
+                <div class="message-content">
+
+                    <strong>
+                        GREHANI
+                    </strong>
+
+
+                    <p>
+                        Hello! 👋
+                        I'm GREHANI, your mentor and companion.
+                        <br><br>
+                        You can talk to me about anything :— studies, coding,career, ideas, problems,
+                        or simply talk when you want someone to listen.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+        <div class="image-preview-container">
+
+            <img
+                id="imagePreview"
+                class="image-preview"
+            >
+
+        </div>
+
+        <div class="input-area">
+
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+
+            <button
+                id="imageButton"
+                class="input-button"
+                title="Upload image"
+            >
+                🖼️
+            </button>
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Talk to GREHANI..."
+                autocomplete="off"
+            >
+
+            <button
+                id="micButton"
+                class="input-button"
+                title="Speak"
+            >
+                🎤
+            </button>
+
+            <button
+                id="sendButton"
+                class="send-button"
+                title="Send"
+            >
+                ➤
+            </button>
+
+
+        </div>
+
+        <footer class="footer">
+
+            <span>
+                GREHANI
+            </span>
+
+            <span>
+                Your Mentor • Your Listener • Your Companion
+            </span>
+
+        </footer>
+
+
+    </div>
+
+    <script src="AI_Agent.js"></script>
+
+
+</body>
+
+</html>
