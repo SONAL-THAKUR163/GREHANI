@@ -82,42 +82,43 @@ GREHANI Chat Interface
 
 🚀 Deployment
 GREHANI is deployed using Render.
-•Frontend
-•Render Static Site
-•Backend
-•Render Web Service
-•API Endpoint
+- Frontend
+- Render Static Site
+- Backend
+- Render Web Service
+- API Endpoint
 https://grehani.onrender.com/api/chat
 
 🔐 Security
-API keys are stored using environment variables.
-The .gitignore file prevents sensitive files from being uploaded:
+- API keys are stored using environment variables.
+- The .gitignore file prevents sensitive files from being uploaded:
 .env
 backend/.env
 node_modules/
 
 
 🎯 Future Improvements
-🎙️ Voice input and output
-🧠 Conversation memory
-👤 User authentication
-💾 Chat history
-🌙 Dark/light mode
-📱 Improved mobile UI
-📊 Usage analytics
-🌍 Multi-language support
-🤝 Contributing
+-🎙️ Voice input and output
+-🧠 Conversation memory
+-👤 User authentication
+-💾 Chat history
+-🌙 Dark/light mode
+-📱 Improved mobile UI
+-📊 Usage analytics
+-🌍 Multi-language support
+-🤝 Contributing
+
 Contributions are welcome!
-Fork the repository
-Create a new branch
-Make your changes
-Commit your changes
-Push the branch
-Open a Pull Request
+- Fork the repository
+- Create a new branch
+- Make your changes
+- Commit your changes
+- Push the branch
+- Open a Pull Request
 
 ⭐ Support
 If you found GREHANI useful or interesting:
-⭐ Give this repository a star!
+Give this repository a star!
 Your support motivates me to build more projects. ❤️
 You can also share the project with other developers.
 
