@@ -31,7 +31,6 @@ const darkModeButton =
 
 let selectedImage = null;
 
-
 async function sendMessage() {
 
     const message =
@@ -40,7 +39,6 @@ async function sendMessage() {
     if (message === "" && !selectedImage) {
         return;
     }
-
 
     if (selectedImage) {
 
@@ -72,12 +70,11 @@ async function sendMessage() {
             "ai"
         );
 
-
     try {
 
         const response =
             await fetch(
-                "https://grehani-flpm.onrender.com/api/chat",
+                "http://localhost:5000/api/chat",
                 {
 
                     method: "POST",
@@ -104,9 +101,7 @@ async function sendMessage() {
         const data =
             await response.json();
 
-
         thinking.remove();
-
 
         if (!response.ok) {
 
@@ -140,14 +135,10 @@ async function sendMessage() {
             error
         );
 
-
         thinking.remove();
-
-
         addMessage(
 
             "Sorry, I could not connect to GREHANI.",
-
             "ai"
 
         );
@@ -169,13 +160,9 @@ function addMessage(
     const message =
         document.createElement("div");
 
-
     if (sender === "user") {
-
         message.className =
             "message user-message";
-
-
         message.innerHTML = `
 
             <div class="avatar">
@@ -198,16 +185,12 @@ function addMessage(
                 }
 
                 <p></p>
-
             </div>
-
         `;
-
     } else {
 
         message.className =
             "message ai-message";
-
 
         message.innerHTML = `
 
@@ -229,11 +212,9 @@ function addMessage(
 
     }
 
-
     message
         .querySelector("p")
         .textContent = text;
-
 
     chatBox.appendChild(
         message
@@ -242,7 +223,6 @@ function addMessage(
 
     chatBox.scrollTop =
         chatBox.scrollHeight;
-
 
     return message;
 
@@ -253,11 +233,9 @@ sendButton.addEventListener(
     sendMessage
 );
 
-
 messageInput.addEventListener(
     "keydown",
     function(event) {
-
         if (
             event.key === "Enter"
         ) {
@@ -271,7 +249,6 @@ messageInput.addEventListener(
     }
 );
 
-
 if (imageButton && imageInput) {
 
     imageButton.addEventListener(
@@ -284,7 +261,6 @@ if (imageButton && imageInput) {
     );
 
 }
-
 
 if (imageInput) {
 
@@ -331,7 +307,6 @@ if (imageInput) {
             const reader =
                 new FileReader();
 
-
             reader.onload =
                 function(e) {
 
@@ -348,9 +323,7 @@ if (imageInput) {
                             "block";
 
                     }
-
                 };
-
 
             reader.readAsDataURL(
                 file
@@ -360,9 +333,7 @@ if (imageInput) {
     );
 
 }
-
 function clearSelectedImage() {
-
     selectedImage = null;
 
 
@@ -374,7 +345,6 @@ function clearSelectedImage() {
             "none";
 
     }
-
 
     if (imageInput) {
 
@@ -388,64 +358,47 @@ const SpeechRecognition =
     window.SpeechRecognition ||
     window.webkitSpeechRecognition;
 
-
 let recognition = null;
-
-
 if (SpeechRecognition) {
 
     recognition =
         new SpeechRecognition();
 
-
     recognition.lang =
         "en-IN";
-
-
     recognition.continuous =
         false;
-
 
     recognition.interimResults =
         false;
 
-
     recognition.onstart =
         function() {
-
             micButton.textContent =
                 "🔴";
-
 
             status.textContent =
                 "Listening...";
 
         };
 
-
     recognition.onresult =
         function(event) {
-
             const spokenText =
                 event.results[0][0]
                     .transcript;
 
-
             messageInput.value =
                 spokenText;
-
 
             sendMessage();
 
         };
 
-
     recognition.onend =
         function() {
-
             micButton.textContent =
                 "🎤";
-
 
             status.textContent =
                 "Ready";
@@ -461,10 +414,8 @@ if (SpeechRecognition) {
                 event.error
             );
 
-
             micButton.textContent =
                 "🎤";
-
 
             status.textContent =
                 "Microphone error";
@@ -487,9 +438,7 @@ micButton.addEventListener(
 
         }
 
-
         try {
-
             recognition.start();
 
         } catch (error) {
@@ -501,18 +450,13 @@ micButton.addEventListener(
     }
 );
 
-
 let availableVoices = [];
-
-
 function loadVoices() {
 
     availableVoices =
         speechSynthesis.getVoices();
 
 }
-
-
 loadVoices();
 
 
@@ -524,7 +468,6 @@ speechSynthesis.onvoiceschanged =
     };
 
 function speakAnswer(text) {
-
     if (
         !window.speechSynthesis
     ) {
@@ -533,13 +476,9 @@ function speakAnswer(text) {
 
     }
 
-
     speechSynthesis.cancel();
-
-
     const voices =
         speechSynthesis.getVoices();
-
 
     const femaleVoice =
         voices.find(
@@ -552,17 +491,13 @@ function speakAnswer(text) {
                 )
         );
 
-
     const voice =
         new SpeechSynthesisUtterance(
             text
         );
 
-
     voice.lang =
         "en-IN";
-
-
     if (femaleVoice) {
 
         voice.voice =
@@ -570,17 +505,15 @@ function speakAnswer(text) {
 
     }
 
+    // Natural voice
+
     voice.rate =
         1.0;
-
-
     voice.pitch =
         1.0;
 
-
     voice.volume =
         1.0;
-
 
     speechSynthesis.speak(
         voice
@@ -590,7 +523,6 @@ function speakAnswer(text) {
 
 
 if (darkModeButton) {
-
     darkModeButton.addEventListener(
         "click",
         function() {
@@ -599,18 +531,15 @@ if (darkModeButton) {
                 "dark-mode"
             );
 
-
             const dark =
                 document.body.classList.contains(
                     "dark-mode"
                 );
 
-
             localStorage.setItem(
                 "grehaniDarkMode",
                 dark
             );
-
 
             darkModeButton.textContent =
                 dark
@@ -622,12 +551,10 @@ if (darkModeButton) {
 
 }
 
-
 const savedDarkMode =
     localStorage.getItem(
         "grehaniDarkMode"
     );
-
 
 if (
     savedDarkMode === "true"
@@ -650,13 +577,9 @@ if (
 clearButton.addEventListener(
     "click",
     function() {
-
         speechSynthesis.cancel();
 
-
         clearSelectedImage();
-
-
         chatBox.innerHTML = `
 
             <div class="message ai-message">
@@ -677,12 +600,8 @@ clearButton.addEventListener(
                     </p>
 
                 </div>
-
             </div>
-
         `;
-
-
         status.textContent =
             "Ready";
 
