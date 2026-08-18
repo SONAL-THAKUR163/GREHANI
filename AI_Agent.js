@@ -508,7 +508,7 @@ function speakAnswer(text) {
     // Natural voice
 
     voice.rate =
-        1.2;
+        1.08;
     voice.pitch =
         1.2;
 
