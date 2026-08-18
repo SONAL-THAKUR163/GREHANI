@@ -77,7 +77,7 @@ async function sendMessage() {
 
         const response =
             await fetch(
-                "https://grehani.onrender.com/api/chat",
+                "https://grehani-flpm.onrender.com/api/chat",
                 {
 
                     method: "POST",
