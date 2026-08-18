@@ -3,27 +3,18 @@
     margin: 0;
     padding: 0;
 }
-
 html,
 body {
     width: 100%;
     height: 100%;
 }
-
 body {
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: #f5f7fb;
-
     color: #202124;
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
     overflow: hidden;
 }
-
 .app {
     width: 100%;
     height: 100vh;
@@ -31,10 +22,8 @@ body {
     flex-direction: column;
     background: #ffffff;
 }
-
 .header {
     height: 78px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,13 +33,11 @@ body {
     flex-shrink: 0;
     transition: 0.3s ease;
 }
-
 .brand {
     display: flex;
     align-items: center;
     gap: 13px;
 }
-
 .brand-icon {
     width: 45px;
     height: 45px;
@@ -61,46 +48,34 @@ body {
     background: #eef2ff;
     font-size: 23px;
 }
-
 .brand h1 {
     font-size: 25px;
     letter-spacing: 2px;
     font-weight: 800;
     line-height: 1.1;
 }
-
 .brand p {
     margin-top: 3px;
     font-size: 12px;
     color: #777;
     letter-spacing: 0.3px;
 }
-
-
 .header-actions {
     display: flex;
     gap: 10px;
 }
-
-
 .icon-button,
 .input-button,
 .send-button {
     border: none;
     cursor: pointer;
-    transition:
-        transform 0.15s ease,
-        background 0.2s ease;
+    transition: transform 0.15s ease, background 0.2s ease;
 }
-
-
 .icon-button:hover,
 .input-button:hover,
 .send-button:hover {
     transform: scale(1.06);
 }
-
-
 .icon-button {
     width: 42px;
     height: 42px;
@@ -108,8 +83,6 @@ body {
     background: #f1f3f5;
     font-size: 18px;
 }
-
-
 .input-button {
     width: 45px;
     height: 45px;
@@ -118,8 +91,6 @@ body {
     font-size: 20px;
     flex-shrink: 0;
 }
-
-
 .send-button {
     width: 48px;
     height: 48px;
@@ -129,12 +100,9 @@ body {
     font-size: 21px;
     flex-shrink: 0;
 }
-
-
 .send-button:hover {
     background: #000000;
 }
-
 .status {
     height: 28px;
     display: flex;
@@ -146,7 +114,6 @@ body {
     flex-shrink: 0;
     border-bottom: 1px solid #f0f0f0;
 }
-
 .chat-box {
     flex: 1;
     overflow-y: auto;
@@ -154,24 +121,16 @@ body {
     scroll-behavior: smooth;
     background: #fafbfc;
 }
-
-
 .chat-box::-webkit-scrollbar {
     width: 7px;
 }
-
-
 .chat-box::-webkit-scrollbar-track {
     background: transparent;
 }
-
-
 .chat-box::-webkit-scrollbar-thumb {
     background: #cfd3d8;
     border-radius: 10px;
 }
-
-
 .message {
     display: flex;
     gap: 13px;
@@ -179,23 +138,16 @@ body {
     max-width: 850px;
     animation: messageAppear 0.25s ease;
 }
-
-
 @keyframes messageAppear {
-
     from {
         opacity: 0;
         transform: translateY(8px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
-
-
 .avatar {
     width: 40px;
     height: 40px;
@@ -207,56 +159,41 @@ body {
     background: #eef2ff;
     font-size: 19px;
 }
-
-
 .message-content {
     max-width: 720px;
     padding: 15px 18px;
     border-radius: 16px;
     background: #ffffff;
     border: 1px solid #e8eaed;
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-
-
 .message-content strong {
     display: block;
     margin-bottom: 8px;
     font-size: 13px;
     font-weight: 700;
 }
-
-
 .message-content p {
     font-size: 15px;
     line-height: 1.65;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-
 .user-message {
     margin-left: auto;
     flex-direction: row-reverse;
 }
-
-
 .user-message .message-content {
     background: #111827;
-
     color: #ffffff;
-
     border: none;
 }
-
 .user-message .avatar {
     background: #e5e7eb;
 }
-
 .ai-message .message-content {
     background: #ffffff;
 }
-
 .chat-image {
     display: block;
     width: 280px;
@@ -267,8 +204,6 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ddd;
 }
-
-
 .image-preview-container {
     display: flex;
     align-items: center;
@@ -277,11 +212,8 @@ body {
     min-height: 0;
     flex-shrink: 0;
 }
-
-
 .image-preview {
     display: none;
-
     width: 75px;
     height: 75px;
     object-fit: cover;
@@ -289,7 +221,6 @@ body {
     border: 2px solid #d1d5db;
     margin: 8px 0;
 }
-
 .input-area {
     min-height: 76px;
     display: flex;
@@ -300,8 +231,6 @@ body {
     border-top: 1px solid #e5e7eb;
     flex-shrink: 0;
 }
-
-
 .input-area input[type="text"] {
     flex: 1;
     height: 48px;
@@ -314,18 +243,14 @@ body {
     color: #202124;
     transition: 0.2s ease;
 }
-
 .input-area input[type="text"]:focus {
     border-color: #8b93ff;
     background: #ffffff;
-    box-shadow:
-        0 0 0 3px rgba(99, 102, 241, 0.08);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
 }
-
 .input-area input[type="text"]::placeholder {
     color: #8a8f98;
 }
-
 .footer {
     min-height: 30px;
     display: flex;
@@ -337,199 +262,171 @@ body {
     background: #ffffff;
     flex-shrink: 0;
 }
-
 body.dark-mode {
     background: #0b0f14;
     color: #f1f5f9;
 }
-
 body.dark-mode .app {
     background: #0b0f14;
 }
-
 body.dark-mode .header {
     background: #11161d;
     border-bottom-color: #252b34;
 }
-
 body.dark-mode .brand-icon {
     background: #1b2330;
 }
-
 body.dark-mode .brand p {
     color: #9ca3af;
 }
-
 body.dark-mode .brand h1 {
     color: #ffffff;
 }
-
 body.dark-mode .icon-button,
 body.dark-mode .input-button {
     background: #202731;
     color: #ffffff;
 }
-
 body.dark-mode .status {
     background: #11161d;
     color: #9ca3af;
     border-bottom-color: #252b34;
 }
-
 body.dark-mode .chat-box {
     background: #0b0f14;
 }
-
 body.dark-mode .chat-box::-webkit-scrollbar-thumb {
     background: #3b4350;
 }
-
 body.dark-mode .ai-message .message-content {
     background: #171d25;
     border-color: #29313c;
     color: #f1f5f9;
 }
-
 body.dark-mode .avatar {
     background: #202731;
 }
-
 body.dark-mode .input-area {
     background: #11161d;
     border-top-color: #252b34;
 }
-
 body.dark-mode .input-area input[type="text"] {
     background: #1a2029;
     border-color: #303844;
     color: #ffffff;
 }
-
-
 body.dark-mode .input-area input[type="text"]:focus {
     background: #1c232d;
     border-color: #6570ff;
 }
-
-
 body.dark-mode .input-area input[type="text"]::placeholder {
     color: #7f8997;
 }
-
-
 body.dark-mode .footer {
     background: #11161d;
-
     color: #717b89;
 }
-
-
 body.dark-mode .image-preview-container {
     background: #11161d;
 }
-
 @media (max-width: 700px) {
-
     .header {
         height: 68px;
         padding: 0 14px;
     }
-
     .brand-icon {
         width: 38px;
         height: 38px;
-
         font-size: 19px;
     }
-
     .brand h1 {
         font-size: 20px;
-
         letter-spacing: 1.5px;
     }
-
     .brand p {
         font-size: 10px;
     }
-
     .header-actions {
         gap: 6px;
     }
-
     .icon-button {
         width: 37px;
         height: 37px;
         font-size: 16px;
     }
-
     .chat-box {
         padding: 20px 12px;
+        min-height: 0;
+        overflow-y: auto;
     }
-
     .message {
         max-width: 95%;
         gap: 8px;
         margin-bottom: 18px;
     }
-
     .avatar {
         width: 34px;
         height: 34px;
         min-width: 34px;
         font-size: 16px;
     }
-
     .message-content {
         padding: 12px 14px;
     }
-
     .message-content p {
         font-size: 14px;
         line-height: 1.55;
     }
-
     .input-area {
         padding: 9px 10px;
         gap: 6px;
+        position: sticky;
+        bottom: 0;
+        z-index: 1000;
+        background: #ffffff;
+        flex-shrink: 0;
     }
-
     .input-area input[type="text"] {
         height: 45px;
         padding: 0 14px;
         font-size: 14px;
     }
-
     .input-button {
         width: 42px;
         height: 42px;
         font-size: 18px;
     }
-
     .send-button {
         width: 44px;
         height: 44px;
     }
-
     .footer {
         font-size: 9px;
-
         padding-bottom: 4px;
     }
-
+    html,
+    body {
+        height: 100%;
+        height: 100dvh;
+    }
+    .app {
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+    .chat-box {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+    }
 }
-
 @media (max-width: 420px) {
-
     .brand p {
         display: none;
     }
-
     .footer span:last-child {
         display: none;
     }
-
     .chat-image {
         width: 220px;
     }
-
 }
